@@ -1,116 +1,69 @@
 extends KinematicBody
 
-# uses code from Jayanam
-# https://www.youtube.com/watch?v=kc-zJnRvPUY
-
-var facing_direction = Vector3(0,0,0)
+var gravity = -9.8
 var velocity = Vector3()
-var gravity = -35
-var camera
+var animplayer
 var character
-var ground
-var traction
-var SPEED = 14
-var ACCELERATION = 20
-const DECELERATION = 10
-var JUMP_HEIGHT = 15
-var lifecycle = 0
-var is_moving = false
-var can_jump = false
-
-var animationPlayer
-
-
+const MAX_SPEED = 10
+const ACCELERATION = 3
+const DE_ACCELERATION = 15
+const DEADZONE = 0.2
+const JUMP_SPEED = 7
 func _ready():
 	character = get_node(".")
+
 	
-	
-	traction = get_node("Traction")
-	
+
 func _physics_process(delta):
-	PlayerVars.lifecycle = lifecycle
-	
-	camera = get_node("target/Camera").get_global_transform()
-	get_node("target/Camera").player = self
-	
-	loop_controls()
-	
-	#jump logic
-	facing_direction.y = 0
-	facing_direction = facing_direction.normalized()
+	var dir = Vector3(0,0,0)
+	var ismoving = false
+	if Input.is_action_pressed("ui_up"):
+		dir -=  Vector3(0,0,1)
+		ismoving = true
+	if Input.is_action_pressed("ui_down"):
+		dir +=  Vector3(0,0,1)
+		ismoving = true
+	if Input.is_action_pressed("ui_left"):
+		dir -=  Vector3(1,0,0)
+		ismoving = true
+	if Input.is_action_pressed("ui_right"):
+		dir +=  Vector3(1,0,0)
+		ismoving = true
+	dir.y = 0
+	dir = dir.normalized()
+
 	velocity.y += delta * gravity
-	gravity = lerp(gravity, -35, 0.1)
-	
-	# horizontal velocity
+
 	var hv = velocity
 	hv.y = 0
-	
-	var new_pos = facing_direction * lerp(0, SPEED, 1)
-	var accel = DECELERATION
-	
-	if facing_direction.dot(hv) > 0:
+
+	if velocity.y > 0:
+		gravity = -20
+	else:
+		gravity = -30 
+
+	var new_pos = dir * MAX_SPEED
+	var accel = DE_ACCELERATION
+
+	if dir.dot(hv) > 0:
 		accel = ACCELERATION
-	
+
 	hv = hv.linear_interpolate(new_pos, accel * delta)
-	
-	velocity.x = hv.x 
+
+	velocity.x = hv.x
 	velocity.z = hv.z
+	velocity = move_and_slide(velocity, Vector3(0,1,0))
+	_Globals.player_locale = transform.origin
 	
-	
-	# move charater
-	if traction.is_colliding():
-		velocity = move_and_slide_with_snap(velocity, traction.get_collision_normal(), Vector3(0,1,0), false, 4, 1)
-		gravity = -35
-	else:
-		velocity = move_and_slide(velocity, Vector3(0,1,0))
-	
-	#camera return
-	if is_moving && !Input.is_key_pressed(KEY_SHIFT):
+	#set rotation
+	if ismoving == true:
+
 		var angle = atan2(hv.x, hv.z)
-		var char_rot = get_rotation()
+		var char_rot = character.get_rotation()
+
 		char_rot.y = angle
-		set_rotation(char_rot)
-	# jump
-	if is_on_floor():
-			can_jump = true
-			gravity = -35
-			SPEED = 14
-			return
-	else:
-		can_jump = false
-	if is_on_wall():
-		can_jump = false
-		return
-	for i in get_slide_count():
-		var collision = get_slide_collision(i)
-		#print("Collided with: ", collision.collider.name)
-	return
+		character.set_rotation(char_rot)
 
+	if (is_on_floor() and Input.is_action_pressed("ui_accept")):
+		velocity.y = JUMP_SPEED
 
-
-func loop_controls():
-	facing_direction = Vector3(0,0,0)
-	is_moving = false
-	if(Input.is_action_pressed("ui_up")):
-		facing_direction += -camera.basis[2]
-		is_moving = true
-	if(Input.is_action_pressed("ui_down")):
-		facing_direction += camera.basis[2]
-		is_moving = true
-	if(Input.is_action_pressed("ui_left")):
-		facing_direction += -camera.basis[0]
-		is_moving = true
-	if(Input.is_action_pressed("ui_right")):
-		facing_direction += camera.basis[0]
-		is_moving = true
-	if(Input.is_action_pressed("jump") && can_jump):
-			velocity.y = JUMP_HEIGHT
-
-func _on_Coin_body_entered(body):
-	var name = body.get_name()
-	print("from player")
-	print(name)
-	if(name == 'player'):
-		
-		return
-	pass # Replace with function body.

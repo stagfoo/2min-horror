@@ -17,15 +17,14 @@ func _ready():
 	set_as_toplevel(true)
 
 func _physics_process(delta):
-	var target = get_parent().get_global_transform().origin
+	var target = _Globals.player_locale
 	var pos = get_global_transform().origin
 	var up = Vector3(0,1,0)
 	
 	var offset = pos - target
 	
-	offset = offset.normalized()*distance
 	offset.y = height
 	
-	pos = pos.linear_interpolate(target + offset, lspeed) 
-	
-	look_at_from_position(pos, target, up)
+	pos = pos.linear_interpolate(target + offset, lspeed)
+	self.translation = lerp(self.translation, Vector3(target.x, self.translation.y, target.z+16),0.5)
+	#look_at_from_position(pos, target, up)

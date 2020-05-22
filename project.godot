@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="base"
+config/name="2 Min Horror"
 run/main_scene="res://gui/menu/menu.tscn"
 boot_splash/image="res://splash.png"
 boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )

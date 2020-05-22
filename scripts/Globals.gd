@@ -4,6 +4,8 @@ extends Node
 
 var current_scene = null
 var coin_value = 1
+var player_locale = Vector3(0,0,0)
+var monster_locale = Vector3(0,0,0)
 
 func _ready():
 	var root = get_tree().get_root()
