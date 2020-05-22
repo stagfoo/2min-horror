@@ -19,14 +19,14 @@ extents = Vector3( 6.23794, 0.156302, 5.09363 )
 flags_unshaded = true
 albedo_color = Color( 0.0588235, 0.054902, 0.054902, 1 )
 
-[sub_resource type="ShaderMaterial" id=5]
-shader = ExtResource( 4 )
-shader_param/amount = 0.9
-
 [sub_resource type="ShaderMaterial" id=6]
 shader = ExtResource( 1 )
 shader_param/size_x = 0.002
 shader_param/size_y = 0.002
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = ExtResource( 4 )
+shader_param/amount = 0.9
 
 [node name="Spatial" type="Spatial"]
 
@@ -46,6 +46,156 @@ height = 0.490088
 depth = 6.42798
 material = SubResource( 4 )
 
+[node name="Spatial" type="Spatial" parent="level"]
+transform = Transform( -0.1, 0, 1.50996e-07, 0, 0.5, 0, -1.50996e-08, 0, -1, 1.99099, -12.0662, 1.89279 )
+
+[node name="StaticBody27" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody27"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody26" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54288, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody26"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody25" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.50039, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody25"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody24" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7358, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody24"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody23" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.3474, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody23"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody22" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3685, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody22"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody21" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.542, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody21"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody20" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.2195, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody20"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody19" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9476, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody19"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody18" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.7492, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody18"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody17" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 39.905, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody17"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody16" type="StaticBody" parent="level/Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 44.4381, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial/StaticBody16"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Spatial2" type="Spatial" parent="level"]
+transform = Transform( 0.0586672, 0, 0, 0, 1, 0, 0, 0, 0.101337, 0.169012, 0.5233, 3.17247 )
+
+[node name="StaticBody4" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, -56.0425, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody4"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody5" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, -47.2716, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody5"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody6" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, -37.4742, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody6"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody7" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, -26.9889, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody7"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody8" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, -15.5722, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody8"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody9" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, -3.14176, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody9"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody10" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, 4.7146, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody10"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody11" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, 16.2945, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody11"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody12" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, 23.0482, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody12"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody13" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, 34.9353, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody13"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody14" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, 42.7479, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody14"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="StaticBody15" type="StaticBody" parent="level/Spatial2"]
+transform = Transform( 2.47564, 0, 0, 0, -0.238686, 0, 0, 0, 2.30898, 53.9702, 1.83645, -39.6913 )
+
+[node name="CSGBox" type="CSGBox" parent="level/Spatial2/StaticBody15"]
+transform = Transform( 1, 0, 0, 0, 27.5701, 0, 0, 0, 1, 0, 0, 0 )
+
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.938065, 0.34646, 0, -0.34646, 0.938065, 0, 9, 14 )
 current = true
@@ -54,14 +204,22 @@ script = ExtResource( 3 )
 [node name="player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.18623, 0.431285 )
 
+[node name="pixel" type="ColorRect" parent="."]
+material = SubResource( 6 )
+margin_right = 1032.0
+margin_bottom = 614.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="tilt-shift-top" type="ColorRect" parent="."]
 material = SubResource( 5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -12.0
-margin_top = 375.0
+margin_top = 372.0
 margin_right = 12.0
-margin_bottom = 8.0
+margin_bottom = 5.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -74,14 +232,6 @@ margin_left = -15.0
 margin_top = 5.0
 margin_right = 24.0
 margin_bottom = -321.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="pixel" type="ColorRect" parent="."]
-material = SubResource( 6 )
-margin_right = 1032.0
-margin_bottom = 614.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
