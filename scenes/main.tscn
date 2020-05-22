@@ -47,7 +47,7 @@ depth = 6.42798
 material = SubResource( 4 )
 
 [node name="Spatial" type="Spatial" parent="level"]
-transform = Transform( -0.1, 0, 1.50996e-07, 0, 0.5, 0, -1.50996e-08, 0, -1, 1.99099, -12.0662, 1.89279 )
+transform = Transform( -0.1, 0, 1.50996e-08, 0, 0.1, 0, -1.50996e-08, 0, -0.1, 1.99099, -0.927742, 1.89279 )
 
 [node name="StaticBody27" type="StaticBody" parent="level/Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
@@ -212,26 +212,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="tilt-shift-top" type="ColorRect" parent="."]
-material = SubResource( 5 )
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = -12.0
-margin_top = 372.0
-margin_right = 12.0
-margin_bottom = 5.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="tilt-shift-bottom" type="ColorRect" parent="."]
 material = SubResource( 5 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -10.1494
+margin_top = 383.104
+margin_right = 13.8506
+margin_bottom = 16.1037
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tilt-shift-top" type="ColorRect" parent="."]
+material = SubResource( 5 )
+anchor_right = 1.0
+anchor_bottom = 1.0
 margin_left = -15.0
-margin_top = 5.0
+margin_top = -15.3568
 margin_right = 24.0
-margin_bottom = -321.0
+margin_bottom = -341.357
 __meta__ = {
 "_edit_use_anchors_": false
 }
